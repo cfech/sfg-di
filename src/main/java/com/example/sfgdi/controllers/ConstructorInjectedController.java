@@ -1,8 +1,12 @@
 package com.example.sfgdi.controllers;
 
 import com.example.sfgdi.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
+
+    //autoWired is optional here
 
     //makes this unchangeable once running through the constructor
     private final GreetingService greetingService;
