@@ -3,7 +3,7 @@ https://github.com/springframeworkguru
 
 The purpose of this project is to learn the different methods of dependency injection in spring.
 
-My personally created branches are mark ##my"Activity" ex: 01myStart
+My personally created branches are named ##my"Activity" ex: 01myStart
 
 
 # Dependency Injection Examples
