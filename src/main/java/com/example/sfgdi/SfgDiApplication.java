@@ -22,9 +22,9 @@ public class SfgDiApplication {
 		//THIS IS INVERSION OF CONTROL
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
+		//uses primary as a default
+		System.out.println("---Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("Property ----");
 
