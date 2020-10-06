@@ -1,9 +1,6 @@
 package com.example.sfgdi;
 
-import com.example.sfgdi.controllers.ConstructorInjectedController;
-import com.example.sfgdi.controllers.MyController;
-import com.example.sfgdi.controllers.PropertyInjectedController;
-import com.example.sfgdi.controllers.SetterInjectedController;
+import com.example.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -21,6 +18,11 @@ public class SfgDiApplication {
 		// it just provides you with an instance
 		//THIS IS INVERSION OF CONTROL
 		MyController myController = (MyController) ctx.getBean("myController");
+
+		//Using profiles
+		I8TnController i8TnController = (I8TnController) ctx.getBean("i8TnController");
+		System.out.println(i8TnController.sayHello());
+
 
 		//uses primary as a default
 		System.out.println("---Primary Bean");
