@@ -1,12 +1,9 @@
 package com.example.sfgdi.controllers;
 
-import com.example.sfgdi.services.GreetingService;
-import com.example.sfgdi.services.GreetingServiceImpl;
+import com.example.sfgdi.services.ConstructorGreetingService;
 import com.example.sfgdi.services.GreetingServiceImplSpanish;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
 
@@ -22,7 +19,7 @@ class PropertyInjectedControllerTest {
         controller = new PropertyInjectedController();
 
         //inject our greeting type into the property -- least preferred method
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
 
 
         c2 = new PropertyInjectedController();

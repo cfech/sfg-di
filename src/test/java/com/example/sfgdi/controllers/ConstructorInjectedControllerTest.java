@@ -1,11 +1,9 @@
 package com.example.sfgdi.controllers;
 
-import com.example.sfgdi.services.GreetingServiceImpl;
+import com.example.sfgdi.services.ConstructorGreetingService;
 import com.example.sfgdi.services.GreetingServiceImplSpanish;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectedControllerTest {
 
@@ -17,7 +15,7 @@ class ConstructorInjectedControllerTest {
 
         //here we inject the dependency  right into the constructor - most clean and
         // best practice
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
         c2 = new ConstructorInjectedController(new GreetingServiceImplSpanish());
 
     }
